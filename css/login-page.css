@@ -20,7 +20,7 @@ body{
     padding: 20px;
     display: inline-block;
     text-align: left;
-    margin-top: 20%;
+    margin-top: 10%;
     border-radius: 10px;
 }
 .form-group{
@@ -36,22 +36,53 @@ body{
     height: 30px;
     width:100%;
     border-radius: .2rem;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    color: #495057;
+    
+}
+.form-group input:focus{
+    /* background-color: red; */
+    border: 1px solid #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    /* border-color: #80bdff; */
 }
 .center{
     text-align: center;
 }
 
 #rememberme{
-    display: inline;
+    display: inline-block;
     width: 15px;
     height: 15px;
+    vertical-align: middle;
 }
 
 .form-check-label{
     display: inline;
-    font-size: 15px;
+    vertical-align: middle;
+    margin:0 !important
 }
 .form button[type='submit']{
     width: 100%;
-    padding:5px
+    padding:5px;
+    background-color: #007bff;
+    border:1px solid #007bff;
+    font-size: 18px;
+    cursor: pointer;
+}
+.form button[type='submit']:hover{
+    background-color: #0069d9;
+}
+
+.forget{
+    text-align: center;
+}
+.forget a{
+    text-decoration: none;
+}
+#email-error, #password-error{
+    font-size: 15px;
+    color:red
 }

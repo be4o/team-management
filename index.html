@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login-page.css">
 </head>
 <body>
     <div class="container">
@@ -11,22 +11,31 @@
             <form action="">
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="text" name="email" id="email" >
-                    <small id="error"></small>
+                    <input value="asdasd@gmai.com" autocomplete="off" type="text" name="email" id="email" >
+                    <small id="email-error"></small>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="text" name="password" id="password" >
-                    <small id="error"></small>
+                    <input value="asdasd!@#" autocomplete="off" type="password" name="password" id="password" >
+                    <small id="password-error"></small>
                 </div>
                 <div class="form-group">
-                    <input  type="checkbox" name="rememberme" id="rememberme" >
-                    <label class="form-check-label"  for="rememberme">Remember me</label>
-                    <small id="error"></small>
+                    <input type="checkbox" name="rememberme" id="rememberme" >
+                    <label class="form-check-label" for="rememberme">Remember me</label>
+                    
                 </div>
-                <button type="submit">Login</button>
+                <button  type="submit" onclick="login(event)">Login</button>
             </form>
+            <div class="forget">
+                <a href="#">Forget your password</a>
+            </div>
         </div>
-    </div>
+    </div>    
+    <script src="js/login.js" ></script>
+    <script>
+        // onload
+        console.log(localStorage.email)
+        console.log(localStorage.password)
+    </script>
 </body>
 </html>
