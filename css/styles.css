@@ -1,0 +1,57 @@
+body{
+    background-image: url('../images/background.jpeg');
+    background-size: cover;
+    margin:0;
+    padding: 0;
+    
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+.form{
+    width: 350px;
+    height: 400px;
+    /* background-color: #f39c12; */
+    /* background-color: #f7d78c; */
+    background-color: #a6d3f2;
+    /* margin:20%  auto; */
+    padding: 20px;
+    display: inline-block;
+    text-align: left;
+    margin-top: 20%;
+    border-radius: 10px;
+}
+.form-group{
+    display: block;
+    margin-bottom: 20px;
+}
+.form-group label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.form-group input{
+    display: block;
+    height: 30px;
+    width:100%;
+    border-radius: .2rem;
+}
+.center{
+    text-align: center;
+}
+
+#rememberme{
+    display: inline;
+    width: 15px;
+    height: 15px;
+}
+
+.form-check-label{
+    display: inline;
+    font-size: 15px;
+}
+.form button[type='submit']{
+    width: 100%;
+    padding:5px
+}
