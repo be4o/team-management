@@ -14,45 +14,51 @@ function checkPassword(psw)
         return false;
     return true;
 }
+
+function validate(email, psw){
+    if(checkEmail(email)){
+        __('email-error').innerText = ""        
+    }else{
+        __('email-error').innerText = "*please enter a valid email address."
+    }
+    if(checkPassword(psw)){
+        __('password-error').innerText = "";
+    }else{
+        __('password-error').innerText = "*Password must be greather than 8 character and contains at least one special character @!#$%^&*()"
+    }
+    return checkEmail(email) && checkPassword(psw)
+
+}
 function login(e)
 {
     //get email value
     let email = __('email').value;
-    let psw = __('password').value
-    //check email pattern
+    let psw = __('password').value;
     // debugger
-    if(checkEmail(email)){
-        __('email-error').innerText = ""
-        if(checkPassword(psw)){
-            __('password-error').innerText = "";
-            if(__('rememberme').checked){
-                //store data in the local storage if remember me checked                
-                localStorage.setItem('email', email)
-                localStorage.setItem('password', psw)
-            }else{                
-                if(localStorage.getItem('email'))
-                    localStorage.removeItem('email')
-                if(localStorage.getItem('password'))
-                    localStorage.removeItem('password')
-                sessionStorage.setItem("email", email)
-                sessionStorage.setItem("password", psw)
-            }
-            if(email.indexOf('emp') >= 0){
-                e.preventDefault();
-                location.href = "employee/index.html";
-            }else if(email.indexOf('super') >= 0){
-                e.preventDefault();
-                location.href = "supervisor/index.html";
-            }
+    if(validate(email, psw))
+    {
+        if(__('rememberme').checked){
+            //store data in the local storage if remember me checked                
+            localStorage.setItem('email', email)
+            localStorage.setItem('password', psw)
         }else{
-            __('password-error').innerText = "*Password must be greather than 8 character and contains at least one special character @!#$%^&*()"
+            //clear localstorage data if found when remember me not checked              
+            if(localStorage.getItem('email'))
+                localStorage.removeItem('email')
+            if(localStorage.getItem('password'))
+                localStorage.removeItem('password')
+            //just store them in session storage
+            sessionStorage.setItem("email", email)
+            sessionStorage.setItem("password", psw)
+        }
+        if(email.indexOf('emp') >= 0){
             e.preventDefault();
+            location.href = "employee/index.html";
+        }else if(email.indexOf('super') >= 0){
+            e.preventDefault();
+            location.href = "supervisor/index.html";
         }
     }else{
-        __('email-error').innerText = "*please enter a valid email address."
         e.preventDefault();
     }
-    
-
-    
 }

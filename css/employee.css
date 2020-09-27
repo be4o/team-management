@@ -1,0 +1,93 @@
+body{
+    margin:0; padding:0
+}
+.container{
+    width:80%;
+    display: block;
+    margin:auto;
+    
+}
+
+header{
+    margin-top:25px;
+    background-color: #f39c12;
+    height: 320px;
+    padding: 20px;
+}
+.profile-image img{
+    float:left;
+    margin-right:5px;
+    border-radius: 50%;
+    border:5px solid #AAA;
+}
+header .info{
+    /* border:2px solid #aaa; */
+    display: inline-block;
+    margin-top: 30px;
+    padding: 20px;
+    color:blue
+}
+
+/* Navication menu */
+nav{
+
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+nav li{
+    display: inline;
+}
+nav li a{
+    padding:10px 20px;
+    background-color: #f7d78c;
+    text-decoration: none;
+    color:blue;
+    font-size: 18px;
+}
+nav li a:hover{
+    background-color: #f39c12;
+}
+/* Data table  */
+table{
+    width: 100%;
+}
+tr{
+    cursor: pointer;
+}
+
+thead tr{
+    background-color: dodgerblue !important;
+
+}
+tr:nth-child(odd){
+    background-color: aqua;
+}
+tr:nth-child(even){
+    background-color: burlywood;
+}
+td, th{
+    padding:10px 20px;
+    text-align: center;
+}
+tr:hover{
+    background-color: red;
+}
+.btn-download{
+    padding: 5px 20px;
+    background-color: dodgerblue;
+}
+
+.notes{
+
+}
+div.note{
+    background-color: #cce5ff;
+    color: #004085;
+    border:1px solid #b8daff;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
