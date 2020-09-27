@@ -16,17 +16,20 @@ function checkPassword(psw)
 }
 
 function validate(email, psw){
+    let validornot = true;
     if(checkEmail(email)){
         __('email-error').innerText = ""        
     }else{
         __('email-error').innerText = "*please enter a valid email address."
+        validornot = false;
     }
     if(checkPassword(psw)){
         __('password-error').innerText = "";
     }else{
         __('password-error').innerText = "*Password must be greather than 8 character and contains at least one special character @!#$%^&*()"
+        validornot = false;
     }
-    return checkEmail(email) && checkPassword(psw)
+    return validornot;
 
 }
 function login(e)

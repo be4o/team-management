@@ -32,8 +32,15 @@
         </div>
     </div>    
     <script src="js/login.js" ></script>
-    <script type="module" > 
-        
+    <script > 
+        if(localStorage.email)
+            console.log("local email: "+localStorage.email)
+        if(localStorage.password)
+            console.log("local password: " + localStorage.password)
+        if(sessionStorage.email)
+            console.log('sesion email: '+ sessionStorage.email)
+        if(sessionStorage.password)
+            console.log("session password: " +sessionStorage.password)
     </script>
 </body>
 </html>
