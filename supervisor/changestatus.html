@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Name</title>
+    <link rel="stylesheet" href="../css/employee.css">
+</head>
+<body>
+    <div class="container">
+        <section>
+            <header>
+                <div class="profile-image">
+                    <img src="../images/profile.png" alt="Employee Profile Picture">
+                </div>
+                <div class="info">
+                    <h2>Martin Wagner</h2>
+                    <p>positoin: Team leader</p>
+                    <p>tel: 01273532555</p>
+                    <p>Email: ahmed.ali@example.com</p>
+                    <button onclick="logout(event)">Logout</button>
+                </div>
+            </header>
+        </section>
+        <!-- navication menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="notes.html">Notifications</a></li>
+                <li><a href="requestvacation.html">Request a Vacation</a></li>
+                <li><a href="submitsolution.html">upload a task</a></li>
+                <li><a class="current" href="#">Change Status</a></li>
+            </ul>
+        </nav>
+
+        <!-- Tasks Table -->
+        <section>
+            <div class="form">
+                <form action="">
+                    <div class="form-group">
+                        <label for="task-name">Task Name</label>
+                        <input value="task 1" disabled type="text" id="task-name" name="task-name">
+                        <span id="task-name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="employee-name">Employee</label>
+                        <input disabled value="employee 1" type="text" id="employee-name" name="employee-name">
+                        <span id="employee-name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-status">Task Status</label>
+                        <select required type="file" id="task-status" name="ttask-satus">
+                            <option value="1">approved</option>                                
+                            <option value="2">pending</option>
+                            <option value="3">Not Finished</option>
+                            <option value="4">rejected</option>
+                        </select>
+                        <span id="task-status-error"></span>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="../js/logout.js"></script>
+</body>
+</html>

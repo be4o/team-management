@@ -17,13 +17,14 @@
                     <p>positoin: web developer</p>
                     <p>tel: 01273532555</p>
                     <p>Email: martin.wagner@example.com</p>
+                    <button onclick="logout(event)">Logout</button>
                 </div>
             </header>
         </section>
         <!-- navication menu -->
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a class="current" href="index.html">Home</a></li>
                 <li><a href="notes.html">Notifications</a></li>
                 <li><a href="requestvacation.html">Request a Vacation</a></li>
                 <li><a href="submitsolution.html">Submit task solution</a></li>
@@ -39,42 +40,42 @@
                         <th>Task</th>
                         <th>Status</th>
                         <th>Deadline</th>
-                        <th>action</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
                         <td>task 1</td>
-                        <td>approved</td>
+                        <td><span class="success">approved</span></td>
                         <td>Sep, 26 2020</td>
                         <td><button class="btn-download">Download</button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>task 2</td>
-                        <td>pending</td>
+                        <td><span class="pending">pending</span></td>
                         <td>Sep, 28 2020</td>
                         <td><button class="btn-download">Download</button></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>task 3</td>
-                        <td>Not finished</td>
+                        <td><span class="not-finished">Not finished</span></td>
                         <td>Sep, 31 2020</td>
                         <td><button class="btn-download">Download</button></td>
                     </tr>
                     <tr>
                         <td>1</td>
                         <td>task 1</td>
-                        <td>approved</td>
+                        <td><span class="success">approved</span></td>
                         <td>Sep, 26 2020</td>
                         <td><button class="btn-download">Download</button></td>
                     </tr>
                     <tr>
                         <td>1</td>
                         <td>task 1</td>
-                        <td>approved</td>
+                        <td><span class="rejected">rejected</span></td>
                         <td>Sep, 26 2020</td>
                         <td><button class="btn-download">Download</button></td>
                     </tr>
@@ -82,5 +83,7 @@
             </table>
         </section>
     </div>
+
+    <script src="../js/logout.js"></script>
 </body>
 </html>

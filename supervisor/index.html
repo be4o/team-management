@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Name</title>
+    <link rel="stylesheet" href="../css/employee.css">
+</head>
+<body>
+    <div class="container">
+        <section>
+            <header>
+                <div class="profile-image">
+                    <img src="../images/profile.png" alt="Employee Profile Picture">
+                </div>
+                <div class="info">
+                    <h2>Martin Wagner</h2>
+                    <p>positoin: Team leader</p>
+                    <p>tel: 01273532555</p>
+                    <p>Email: ahmed.ali@example.com</p>
+                    <button onclick="logout(event)">Logout</button>
+                </div>
+            </header>
+        </section>
+        <!-- navication menu -->
+        <nav>
+            <ul>
+                <li><a class="current" href="index.html">Home</a></li>
+                <li><a href="notes.html">Notifications</a></li>
+                <li><a href="requestvacation.html">Request a Vacation</a></li>
+                <li><a href="submitsolution.html">upload a task</a></li>
+            </ul>
+        </nav>
+
+        <!-- Tasks Table -->
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Task</th>
+                        <th>Status</th>
+                        <th>Employee</th>
+                        <th>Deadline</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>task 1</td>
+                        <td><span class="success">approved</span></td>
+                        <td>Employee 1</td>
+                        <td>Sep, 26 2020</td>
+                        <td>
+                            <button class="btn-download">Download</button>
+                            <button class="btn-download" ><a href="changestatus.html">change status</a></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>task 2</td>
+                        <td><span class="pending">pending</span></td>
+                        <td>Employee 2</td>
+                        <td>Sep, 28 2020</td>
+                        <td>
+                            <button class="btn-download">Download</button>
+                            <button class="btn-download" ><a href="changestatus.html">change status</a></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>task 3</td>
+                        <td><span class="not-finished">Not finished</span></td>
+                        <td>Employee 4</td>
+                        <td>Sep, 31 2020</td>
+                        <td>
+                            <button class="btn-download">Download</button>
+                            <button class="btn-download" ><a href="changestatus.html">change status</a></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>task 1</td>
+                        <td><span class="success">approved</span></td>
+                        <td>Employee 1</td>
+                        <td>Sep, 26 2020</td>
+                        <td>
+                            <button class="btn-download">Download</button>
+                            <button class="btn-download" ><a href="changestatus.html">change status</a></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>task 1</td>
+                        <td><span class="rejected">rejected</span></td>
+                        <td>Employee 3</td>
+                        <td>Sep, 26 2020</td>
+                        <td>
+                            <button class="btn-download">Download</button>
+                            <button class="btn-download" ><a href="changestatus.html">change status</a></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="../js/logout.js"></script>
+</body>
+</html>
