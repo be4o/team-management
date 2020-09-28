@@ -32,6 +32,7 @@ function validate(email, psw){
     return validornot;
 
 }
+
 function login(e)
 {
     //get email value
@@ -44,6 +45,10 @@ function login(e)
             //store data in the local storage if remember me checked                
             localStorage.setItem('email', email)
             localStorage.setItem('password', psw)
+            if(sessionStorage.email)
+                sessionStorage.removeItem('email')
+            if(sessionStorage.password)
+                sessionStorage.removeItem('password')
         }else{
             //clear localstorage data if found when remember me not checked              
             if(localStorage.getItem('email'))

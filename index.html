@@ -41,6 +41,11 @@
             console.log('sesion email: '+ sessionStorage.email)
         if(sessionStorage.password)
             console.log("session password: " +sessionStorage.password)
+        setTimeout(() => {
+            var audio = new Audio('sound/background.mp3')
+            audio.play();
+            
+        }, 1000);
     </script>
 </body>
 </html>

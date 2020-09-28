@@ -30,29 +30,36 @@
             </ul>
         </nav>
 
-        <!-- Form of submit a solution -->
+        <!-- Submit a task solution -->
         <section>
             <div class="form">
-                <h3>Request a vacation</h3>
-                <form method="get" action="">
+                <h3>Submit a solution</h3>
+                <form action="">
                     <div class="form-group">
-                        <label for="from">From</label>
-                        <input required type="date" id="from" name="from">
-                        <span id="from-error"></span>
+                        <label for="task">Task</label>
+                        <select required type="file" id="task" name="task">
+                            <option value="1">task 1</option>                                
+                            <option value="1">task 1</option>
+                            <option value="2">task 2</option>
+                            <option value="3">task 3</option>
+                        </select>
+                        <span id="task-file-error"></span>
                     </div>
-                    <div class="form-group">
-                        <label for="to">To</label>
-                        <input required type="date" id="to" name="to">
-                        <span id="to-error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="reason">Reason</label>
-                        <textarea required name="reason" id="reason" cols="30" rows="10"></textarea>
-                        <span id="reason-error"></span>
-                    </div>
-                    <button type="submit">Submit</button>
+                     <div class="form-group">
+                         <label for="task-file">File</label>
+                         <input required type="file" id="task-file" name="task-file">
+                         <span id="task-file-error"></span>
+                     </div>
+                     <div class="form-group">
+                         <label for="task-notes">Any notes</label>
+                         <textarea required id="task-notes" name="task-notes"></textarea>
+                         <span id="task-notes-error"></span>
+                     </div>
+
+                     <button type="submit">Submit</button>
                 </form>
             </div>
+            
         </section>
     </div>
 </body>
