@@ -9,7 +9,7 @@ function logout(event)
             sessionStorage.removeItem('email')
         if(sessionStorage.password)
             sessionStorage.removeItem('password')
-        location.href = "/ITI/JS/Project";
+        location.href = "../";
     }
    return false; 
 }
