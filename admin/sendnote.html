@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee | Submit a solution</title>
+    <title>Employee Name</title>
     <link rel="stylesheet" href="../css/employee.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
                 </div>
                 <div class="info">
                     <h2>Martin Wagner</h2>
-                    <p>positoin: team leader</p>
+                    <p>positoin: Admin</p>
                     <p>tel: 01273532555</p>
                     <p>Email: martin.wagner@example.com</p>
                     <button onclick="logout(event)">Logout</button>
@@ -26,9 +26,9 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="notes.html">Notifications</a></li>
-                <li><a href="requestvacation.html">Request a Vacation</a></li>
-                <li><a class="current" href="submitsolution.html">Submit task solution</a></li>
-                <li><a href="sendnotification.html">Send a notification</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a  href="requests.html" >Requests</a></li>
+                <li><a class="current" href="sendnote.html" >Send Notification</a></li>
             </ul>
         </nav>
 
@@ -38,25 +38,30 @@
                 <h3>Submit a solution</h3>
                 <form action="">
                     <div class="form-group">
-                        <label for="task-name">Task Name</label>
-                        <input required type="text" id="task-name" name="task-name">
-                        <span id="task-name-error"></span>
+                        <label for="user">User</label>
+                        <!-- all users -->
+                        <select required  id="user" name="user">
+                            <option value="1">emp 1</option>                          
+                            <option value="2">supervisor 1</option>                          
+                            <option value="3">emp </option>                          
+                            <option value="4">supervisor 3</option>
+                            <option value="5">emp 2</option>
+                            <option value="6">emp 3</option>
+                        </select>
+                        <span id="user-error"></span>
                     </div>
                      <div class="form-group">
-                         <label for="task-file">File</label>
-                         <input required type="file" id="task-file" name="task-file">
-                         <span id="task-file-error"></span>
+                         <label for="note-title">Notification Title</label>
+                         <input required type="text" id="note-title" name="note-title">
+                         <span id="note-title-error"></span>
                      </div>
                      <div class="form-group">
-                         <label for="task-notes">Any notes</label>
-                         <textarea required id="task-notes" name="task-notes"></textarea>
-                         <span id="task-notes-error"></span>
-                     </div>
-                     <div class="form-group">
-                        <label for="deadline">Deadline</label>
-                        <input required type="date" id="deadline" name="deadline">
-                        <span id="deadline-error"></span>
+                        <label for="note-body">Notification Body</label>
+                        <textarea required id="note-body" name="note-body"></textarea>
+                        <span id="note-body-error"></span>
                     </div>
+
+                     
 
                      <button type="submit">Submit</button>
                 </form>

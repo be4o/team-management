@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Home</title>
+    <title>Admin Page</title>
     <link rel="stylesheet" href="../css/employee.css">
 </head>
 <body>
@@ -14,8 +14,8 @@
                 </div>
                 <div class="info">
                     <h2>Martin Wagner</h2>
-                    <p>positoin: Team leader</p>
-                    <p>tel: 01273532555</p>
+                    <p>positoin: Admin</p>
+                    <p>tel: 0105566874</p>
                     <p>Email: ahmed.ali@example.com</p>
                     <button onclick="logout(event)">Logout</button>
                 </div>
@@ -26,9 +26,9 @@
             <ul>
                 <li><a class="current" href="index.html">Home</a></li>
                 <li><a href="notes.html">Notifications</a></li>
-                <li><a href="requestvacation.html">Request a Vacation</a></li>
-                <li><a href="submitsolution.html">upload a task</a></li>
-                <li><a href="sendnotification.html">Send a notification</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="requests.html" >Request</a></li>
+                <li><a href="sendnote.html" >Send Notification</a></li>
             </ul>
         </nav>
 
@@ -40,9 +40,9 @@
                         <th>ID</th>
                         <th>Task</th>
                         <th>Status</th>
-                        <th>Employee</th>
                         <th>Deadline</th>
-                        <th>Action</th>
+                        <th>Employee</th>
+                        <th>Approved By</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,56 +50,41 @@
                         <td>1</td>
                         <td>task 1</td>
                         <td><span class="success">approved</span></td>
-                        <td>Employee 1</td>
                         <td>Sep, 26 2020</td>
-                        <td>
-                            <button class="btn-download">Download</button>
-                            <button class="btn-download" ><a href="changestatus.html">change status</a></button>
-                        </td>
+                        <td>Employee 1</td>
+                        <td>Supervisor 1</td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>task 2</td>
                         <td><span class="pending">pending</span></td>
-                        <td>Employee 2</td>
                         <td>Sep, 28 2020</td>
-                        <td>
-                            <button class="btn-download">Download</button>
-                            <button class="btn-download" ><a href="changestatus.html">change status</a></button>
-                        </td>
+                        <td>Employee 2</td>
+                        <td>Supervisor 3</td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>task 3</td>
                         <td><span class="not-finished">Not finished</span></td>
-                        <td>Employee 4</td>
                         <td>Sep, 31 2020</td>
-                        <td>
-                            <button class="btn-download">Download</button>
-                            <button class="btn-download" ><a href="changestatus.html">change status</a></button>
-                        </td>
+                        <td>Employee 4</td>
+                        <td>Supervisor 3</td>
                     </tr>
                     <tr>
                         <td>1</td>
                         <td>task 1</td>
                         <td><span class="success">approved</span></td>
-                        <td>Employee 1</td>
                         <td>Sep, 26 2020</td>
-                        <td>
-                            <button class="btn-download">Download</button>
-                            <button class="btn-download" ><a href="changestatus.html">change status</a></button>
-                        </td>
+                        <td>Employee 1</td>
+                        <td>Supervisor 3</td>
                     </tr>
                     <tr>
                         <td>1</td>
                         <td>task 1</td>
                         <td><span class="rejected">rejected</span></td>
-                        <td>Employee 3</td>
                         <td>Sep, 26 2020</td>
-                        <td>
-                            <button class="btn-download">Download</button>
-                            <button class="btn-download" ><a href="changestatus.html">change status</a></button>
-                        </td>
+                        <td>Employee 3</td>
+                        <td>Supervisor 3</td>
                     </tr>
                 </tbody>
             </table>
@@ -107,5 +92,7 @@
     </div>
 
     <script src="../js/logout.js"></script>
+    <script src="../js/admin.js"></script>
+
 </body>
 </html>

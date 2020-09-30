@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reuqests Approve</title>
+    <link rel="stylesheet" href="../css/employee.css">
+</head>
+<body>
+    <div class="container">
+        <section>
+            <header>
+                <div class="profile-image">
+                    <img src="../images/profile.png" alt="Employee Profile Picture">
+                </div>
+                <div class="info">
+                    <h2>Martin Wagner</h2>
+                    <p>positoin: Admin</p>
+                    <p>tel: 01273532555</p>
+                    <p>Email: martin.wagner@example.com</p>
+                    <button onclick="logout(event)">Logout</button>
+                </div>
+            </header>
+        </section>
+        <!-- navication menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="notes.html">Notifications</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a class="current" href="requests.html" >Requests</a></li>
+                <li><a href="sendnote.html" >Send Notification</a></li>
+            </ul>
+        </nav>
+
+        <!-- Notifications -->
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Request</th>
+                        <th>From</th>
+                        <th>Date</th>
+                        <th>Reason</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Vacation</td>
+                        <td>Employee 1</td>
+                        <td>Sep, 26 2020</td>
+                        <td>I have special conditions</td>
+                        <td>
+                            <button onclick="approveRequest()" class="btn-download">Approve</button>
+                            <button onclick="declineRequest()" class="btn-download" >Decline</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Vacation</td>
+                        <td>Employee 1</td>
+                        <td>Sep, 26 2020</td>
+                        <td>I have special conditions</td>
+                        <td>
+                            <button onclick="approveRequest()" class="btn-download">Approve</button>
+                            <button onclick="declineRequest()" class="btn-download" >Decline</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Vacation</td>
+                        <td>Employee 1</td>
+                        <td>Sep, 26 2020</td>
+                        <td>I have special conditions</td>
+                        <td>
+                            <button onclick="approveRequest()" class="btn-download">Approve</button>
+                            <button onclick="declineRequest()" class="btn-download" >Decline</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Vacation</td>
+                        <td>Employee 1</td>
+                        <td>Sep, 26 2020</td>
+                        <td>I have special conditions</td>
+                        <td>
+                            <button onclick="approveRequest()" class="btn-download">Approve</button>
+                            <button onclick="declineRequest()" class="btn-download" >Decline</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Vacation</td>
+                        <td>Employee 1</td>
+                        <td>Sep, 26 2020</td>
+                        <td>I have special conditions</td>
+                        <td>
+                            <button onclick="approveRequest()" class="btn-download">Approve</button>
+                            <button onclick="declineRequest()" class="btn-download" >Decline</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="../js/logout.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>
