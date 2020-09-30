@@ -32,6 +32,52 @@ function validate(email, psw){
     return validornot;
 
 }
+function storeLocalStorage(email, psw)
+{
+    localStorage.setItem('email', email)
+    localStorage.setItem('password', psw)
+    if(sessionStorage.email)
+        sessionStorage.removeItem('email')
+    if(sessionStorage.password)
+        sessionStorage.removeItem('password')
+}
+function storeSessionStorage(email, psw)
+{
+    if(localStorage.getItem('email'))
+        localStorage.removeItem('email')
+    if(localStorage.getItem('password'))
+        localStorage.removeItem('password')
+    //just store them in session storage
+    sessionStorage.setItem("email", email)
+    sessionStorage.setItem("password", psw)
+}
+function findEmailPsw(obj, email, psw)
+{
+    console.log(obj)
+}
+function redirectLogin(email, psw)
+{
+    let userType = __("member-type").options[__("member-type").selectedIndex].value
+    switch(userType){
+        case "1":
+            //employee
+            getData('data/employees.json', email, psw)
+            __("auth-error").innerHTML = "Invalid User email or password";
+            break;
+        case "2":
+            //supervisor
+            getData('data/supervisors.json', email, psw)
+            __("auth-error").innerHTML = "Invalid User email or password";
+            break;
+        case "3":
+            //admin
+            getData('data/admins.json', email, psw)
+            __("auth-error").innerHTML = "Invalid User email or password";
+            break;
+        default:
+            throw new Error("Wrong data value");
+    }
+}
 
 function login(e)
 {
@@ -42,29 +88,16 @@ function login(e)
     if(validate(email, psw))
     {
         if(__('rememberme').checked){
-            //store data in the local storage if remember me checked                
-            localStorage.setItem('email', email)
-            localStorage.setItem('password', psw)
-            if(sessionStorage.email)
-                sessionStorage.removeItem('email')
-            if(sessionStorage.password)
-                sessionStorage.removeItem('password')
+            //store data in the local storage if remember me checked
+            e.preventDefault();
+            storeLocalStorage(email, psw);
+            redirectLogin(email, psw);
+
         }else{
             //clear localstorage data if found when remember me not checked              
-            if(localStorage.getItem('email'))
-                localStorage.removeItem('email')
-            if(localStorage.getItem('password'))
-                localStorage.removeItem('password')
-            //just store them in session storage
-            sessionStorage.setItem("email", email)
-            sessionStorage.setItem("password", psw)
-        }
-        if(email.indexOf('emp') >= 0){
             e.preventDefault();
-            location.href = "employee/index.html";
-        }else if(email.indexOf('super') >= 0){
-            e.preventDefault();
-            location.href = "supervisor/index.html";
+            storeSessionStorage(email, psw);
+            redirectLogin(email, psw);
         }
     }else{
         e.preventDefault();

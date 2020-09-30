@@ -10,20 +10,29 @@
         <div class="form">
             <form action="">
                 <div class="form-group">
+                    <label for="member-type">Memeber Type</label>
+                    <select required  id="member-type" name="member-type">
+                        <option value="1">Employee</option>                                
+                        <option value="2">Supervisor</option>
+                        <option value="3">Admin</option>                       
+                    </select>
+                    <small id="member-type-error"></small>
+                </div>
+                <div class="form-group">
                     <label for="email">Email</label>
-                    <input value="" autocomplete="off" type="text" name="email" id="email" >
+                    <input  value="asdasdas@gmail.com" autocomplete="off" type="text" name="email" id="email" >
                     <small id="email-error"></small>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input value="" autocomplete="off" type="password" name="password" id="password" >
+                    <input value="asdasasd@!@#!@" autocomplete="off" type="password" name="password" id="password" >
                     <small id="password-error"></small>
                 </div>
                 <div class="form-group">
                     <input type="checkbox" name="rememberme" id="rememberme" >
-                    <label class="form-check-label" for="rememberme">Remember me</label>
-                    
+                    <label class="form-check-label" for="rememberme">Remember me</label>                    
                 </div>
+                <span id="auth-error"></span>
                 <button  type="submit" onclick="login(event)">Login</button>
             </form>
             <div class="forget">
@@ -32,15 +41,11 @@
         </div>
     </div>    
     <script src="js/login.js" ></script>
+    <script src="js/getdata.js"></script>
     <script > 
-        if(localStorage.email)
-            console.log("local email: "+localStorage.email)
-        if(localStorage.password)
-            console.log("local password: " + localStorage.password)
-        if(sessionStorage.email)
-            console.log('sesion email: '+ sessionStorage.email)
-        if(sessionStorage.password)
-            console.log("session password: " +sessionStorage.password)
+                
     </script>
+
+    
 </body>
 </html>

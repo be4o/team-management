@@ -1,0 +1,20 @@
+{
+    "data":[
+        {
+            "name":"Mathew Maged",
+            "email": "mathewmaged@gmail.com",
+            "password": "12345678@",
+            "tel": "01012245876",
+            "position": "Admin",
+            "type":3
+        },
+        {
+            "name":"Fady Nathan",
+            "email": "fadynathan@gmail.com",
+            "password": "12345678@",
+            "tel": "01012245876",
+            "position": "admin",
+            "type":3
+        }
+    ]
+}

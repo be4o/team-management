@@ -32,7 +32,7 @@ body{
     display: inline-block;
     margin-bottom: 5px;
 }
-.form-group input{
+.form-group input, .form-group select{
     display: block;
     height: 30px;
     width:100%;
@@ -42,7 +42,7 @@ body{
     color: #495057;
     
 }
-.form-group input:focus{
+.form-group input:focus,.form-group select:focus{
     /* background-color: red; */
     border: 1px solid #80bdff;
     outline: 0;
@@ -83,7 +83,10 @@ body{
 .forget a{
     text-decoration: none;
 }
-#email-error, #password-error{
+#email-error, #password-error, #auth-error{
     font-size: 15px;
     color:red
+}
+#auth-error{
+    text-align: center;
 }
